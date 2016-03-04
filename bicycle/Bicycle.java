@@ -61,6 +61,7 @@ public class Bicycle {
         if (nRearSprockets >= 3) {
             this.nRearSprockets = nRearSprockets;
         } else {
+            this.nRearSprockets = 0;
             System.out.println("Introduce más de 2 piñones (3 o más)");
         }
         this.frontSprocket = nFrontSprockets;
@@ -86,6 +87,7 @@ public class Bicycle {
         if (nRearSprockets >= 3) {
             this.nRearSprockets = nRearSprockets;
         } else {
+            this.nRearSprockets = 0;
             System.out.println("Introduce más de 2 piñones (3 o más)");
         }
         this.v = v;
