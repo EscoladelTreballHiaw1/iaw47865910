@@ -194,4 +194,12 @@ public class Bicycle {
     public void stop(){
         v = 0;
     }
+    /** Stops the bicycle */
+    public boolean slowDown(){
+        if(frontSprocket > 1) {
+            if(rearSprocket) {
+                
+            }
+        }
+    }
 }
