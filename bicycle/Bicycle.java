@@ -61,7 +61,7 @@ public class Bicycle {
         if (nRearSprockets >= 3) {
             this.nRearSprockets = nRearSprockets;
         } else {
-            this.nRearSprockets = 0;
+            this.nRearSprockets = 3;
             System.out.println("Introduce más de 2 piñones (3 o más)");
         }
         this.frontSprocket = nFrontSprockets;
@@ -87,7 +87,7 @@ public class Bicycle {
         if (nRearSprockets >= 3) {
             this.nRearSprockets = nRearSprockets;
         } else {
-            this.nRearSprockets = 0;
+            this.nRearSprockets = 3;
             System.out.println("Introduce más de 2 piñones (3 o más)");
         }
         this.v = v;
@@ -165,9 +165,11 @@ public class Bicycle {
     public int getRearSprocket() {
         return rearSprocket;
     }
-
+    
     public void setRearSprocket(int rearSprocket) {
-        this.rearSprocket = rearSprocket;
+        if(rearSprocket <= nRearSprockets && rearSprocket > 0) {
+            this.rearSprocket = rearSprocket;
+        }
     }
 
     public int getFrontSprocket() {
@@ -175,7 +177,9 @@ public class Bicycle {
     }
 
     public void setFrontSprocket(int frontSprocket) {
-        this.frontSprocket = frontSprocket;
+        if(frontSprocket <= nFrontSprockets && frontSprocket > 0) {
+            this.frontSprocket = frontSprocket;
+        }
     }
 
     public double getV() {
@@ -184,5 +188,10 @@ public class Bicycle {
 
     public void setV(double v) {
         this.v = v;
+    }
+    
+    /** Stops the bicycle */
+    public void stop(){
+        v = 0;
     }
 }
