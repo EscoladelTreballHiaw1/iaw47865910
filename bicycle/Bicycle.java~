@@ -1,7 +1,7 @@
 /*
  * Bicycle.java
  * 
- * Copyright 2016 Víctor Molina Ferreira <victor.molinaf@gmail.com>
+ * Copyright 2010-2012 Mònica Ramírez Arceda <mramirez@escoladeltreball.org>
  * 
  * This is free software, licensed under the GNU General Public License v3.
  * See http://www.gnu.org/licenses/gpl.html for more information.
@@ -41,7 +41,7 @@ public class Bicycle {
      */
     public Bicycle() {
         this.model = "Mountain bike";
-        this.frontSprocket = 1;
+        this.frontSprocket = 3;
         this.rearSprocket = 1;
         this.nFrontSprockets = 3;
         this.nRearSprockets = 7;
@@ -58,11 +58,7 @@ public class Bicycle {
     public Bicycle(int nFrontSprockets, int nRearSprockets, double v) {
         this.model = "Mountain bike";
         this.nFrontSprockets = nFrontSprockets;
-        if (nRearSprockets >= 3) {
-            this.nRearSprockets = nRearSprockets;
-        } else {
-            System.out.println("Introduce más de 2 piñones (3 o más)");
-        }
+        this.nRearSprockets = nRearSprockets;
         this.frontSprocket = nFrontSprockets;
         this.rearSprocket = 1;
         this.v = v;
@@ -83,11 +79,7 @@ public class Bicycle {
         this.frontSprocket = frontSprocket;
         this.rearSprocket = rearSprocket;
         this.nFrontSprockets = nFrontSprockets;
-        if (nRearSprockets >= 3) {
-            this.nRearSprockets = nRearSprockets;
-        } else {
-            System.out.println("Introduce más de 2 piñones (3 o más)");
-        }
+        this.nRearSprockets = nRearSprockets;
         this.v = v;
     }
 
