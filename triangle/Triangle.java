@@ -1,5 +1,5 @@
 /*
- * Bicycle.java
+ * Triangle.java
  * 
  * Copyright 2016 Víctor Molina Ferreira <victor.molinaf@gmail.com>
  * 
@@ -23,7 +23,7 @@ public class Triangle {
     private double side3;
 
     /**
-     * Constructor by default. Creates a triangle with the sizes of the sides: 3,4, and 5.
+     * Constructor by default. Creates a triangle with the sizes of the sides: 3,4 and 5.
      */
     
     public Triangle() {
