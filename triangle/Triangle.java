@@ -47,6 +47,7 @@ public class Triangle {
         double perimeter = this.side1 + this.side2 + this.side3;
         return perimeter;
     }
+    
     /** Get the area */
     public double area() {
         // Calculate the semiperimeter
