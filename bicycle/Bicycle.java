@@ -167,7 +167,7 @@ public class Bicycle {
     }
     
     public void setRearSprocket(int rearSprocket) {
-        if(rearSprocket <= nRearSprockets && rearSprocket > 0) {
+        if(rearSprocket < nRearSprockets && rearSprocket > 0) {
             this.rearSprocket = rearSprocket;
         }
     }
@@ -177,7 +177,7 @@ public class Bicycle {
     }
 
     public void setFrontSprocket(int frontSprocket) {
-        if(frontSprocket <= nFrontSprockets && frontSprocket > 0) {
+        if(frontSprocket < nFrontSprockets && frontSprocket > 0) {
             this.frontSprocket = frontSprocket;
         }
     }
@@ -194,12 +194,20 @@ public class Bicycle {
     public void stop(){
         v = 0;
     }
-    /** Stops the bicycle */
+    /** The bicycle slowDown */
     public boolean slowDown(){
-        if(frontSprocket > 1) {
-            if(rearSprocket) {
-                
-            }
+        boolean done = false;
+        if(frontSprocket > 1 && rearSprocket < nRearSprockets) {
+            done = changeFrontSprocket(-1);
         }
+        return done;
+    }
+    /** The bicycle speedUp */
+    public boolean speedUp(){
+        boolean done = false;
+        if(frontSprocket > 1 && rearSprocket < nRearSprockets) {
+            done = changeFrontSprocket(+1);
+        }
+        return done;
     }
 }
